@@ -51,7 +51,7 @@ HERO
     align-items: center;
     padding: 60px 0;
     background: linear-gradient(rgba(10, 15, 30, 0.75), rgba(10, 15, 30, 0.75)), 
-                url('blueberry.jpg') no-repeat center center/cover;
+                url('gambar/blueberry.jpg') no-repeat center center/cover;
 }
 
 .hero-subtitle {
@@ -311,7 +311,7 @@ CONTACT
 
 .contact-section {
     background: linear-gradient(rgba(10, 15, 30, 0.75), rgba(10, 15, 30, 0.75)), 
-                url('blueberry.jpg') no-repeat center center/cover;
+                url('gambar/blueberry.jpg') no-repeat center center/cover;
     padding: 100px 0;
 }
 
