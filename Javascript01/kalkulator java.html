@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+<script>
+    var input1 = prompt("Masukkan angka 1:");
+    
+    var input2 = prompt("Masukkan angka 2:");
+
+    var operator = prompt("Masukkan operator (+, -, *, /)");
+
+    var angka1 = parseFloat(input1);
+    var angka2 = parseFloat(input2);
+    var hasil;
+
+    if (operator === "+") {
+        hasil = angka1 + angka2;
+    } else if (operator === "-") {
+        hasil = angka1 - angka2;
+    } else if (operator === "*") {
+        hasil = angka1 * angka2;
+    } else if (operator === "/") {
+        if (angka2 !== 0) {
+            hasil = angka1 / angka2;
+        } else {
+            hasil = "Pembagian tidak bisa dibagi 0";
+        }
+    } else {
+        hasil = "Operator tidak valid!";
+    }
+
+    alert("Hasil: " + hasil);
+</script>
+
+</body>
+</html>

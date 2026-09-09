@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  
+/* Kontainer luar: Hanya scroll vertikal, tidak bisa geser samping */
+.form-box {
+  width: 380px;            
+  height: 170px;           
+  overflow-y: scroll;      
+  overflow-x: hidden;      
+  border: 3px double #777; 
+  padding: 10px;
+  background-color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;             
+}
+
+td {
+  padding: 6px 5px;
+  vertical-align: top;
+}
+
+/* Mengunci textarea agar ukurannya tetap & bisa di-scroll */
+textarea {
+  resize: none;            /* Mematikan fitur ubah ukuran (resize handler) */
+  overflow-y: auto;        /* Scroll bar otomatis muncul jika teks melebihi area */
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="form-box">
+  <form>
+    <table>
+      <!-- Baris 1: Name -->
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" name="name" placeholder="you name here" style="width: 100%;"></td>
+      </tr>
+
+      <!-- Baris 2: Email -->
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" placeholder="your email here" style="width: 100%;"></td>
+      </tr>
+
+      <!-- Baris 3: Address -->
+      <tr>
+        <td><label for="address">Address:</label></td>
+        <td>
+          <textarea id="address" name="address" rows="4" placeholder="25 Nowhere Street&#10;Somewhere&#10;Not Here&#10;Y2K 5RU"></textarea>
+        </td>
+      </tr>
+
+      <!-- Baris 4: Postcode -->
+      <tr>
+        <td><label for="postcode">Postcode:</label></td>
+        <td><input type="text" id="postcode" name="postcode" placeholder="postal code" style="width: 120px;"></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+</body>
+</html>
