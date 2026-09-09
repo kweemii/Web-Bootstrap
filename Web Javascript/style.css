@@ -22,7 +22,6 @@ p {
     line-height: 1.7;
 }
 
-
 /* =====================================
 NAVBAR
 ===================================== */
@@ -63,7 +62,6 @@ NAVBAR
     height: 2px;
     background-color: #6ea8fe;
 }
-
 
 /* =====================================
 HERO SECTION
@@ -112,7 +110,6 @@ HERO SECTION
     margin-top: 30px;
 }
 
-
 /* =====================================
 BUTTONS
 ===================================== */
@@ -133,7 +130,6 @@ BUTTONS
     border-color: #1d4ed8;
 }
 
-
 /* =====================================
 SOCIAL ICONS
 ===================================== */
@@ -149,7 +145,6 @@ SOCIAL ICONS
     color: #6ea8fe;
     text-decoration: none;
 }
-
 
 /* =====================================
 PROFILE
@@ -175,7 +170,6 @@ PROFILE
     transform: scale(1.05);
 }
 
-
 /* =====================================
 SECTION TITLES
 ===================================== */
@@ -197,7 +191,6 @@ SECTION TITLES
     font-weight: bold;
     margin-bottom: 0;
 }
-
 
 /* =====================================
 ABOUT & CAROUSEL
@@ -227,7 +220,6 @@ ABOUT & CAROUSEL
     height: 380px;
     object-fit: cover;
 }
-
 
 /* =====================================
 CHART SECTION
@@ -265,7 +257,6 @@ CHART SECTION
     height: 100% !important;
 }
 
-
 /* =====================================
 SKILLS SECTION
 ===================================== */
@@ -284,18 +275,22 @@ SKILLS SECTION
 }
 
 .skill-card {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Latar belakang kotak tetap putih */
     padding: 30px;
     border-radius: 15px;
     text-align: center;
     height: 100%;
+    color: #212529;
+    border: 2px solid transparent; /* Border transparan saat diam */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
+/* Efek Hover Menyala Sesuai Skema Warna CSS Kamu */
 .skill-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #2563eb; /* Border menyala warna biru utama */
+    box-shadow: 0 0 25px rgba(110, 168, 254, 0.6); /* Efek glow/pendaran biru cerah */
 }
 
 .skill-card i {
@@ -305,6 +300,7 @@ SKILLS SECTION
 
 .skill-card h4 {
     margin: 20px 0;
+    color: #212529;
 }
 
 .progress {
@@ -317,7 +313,6 @@ SKILLS SECTION
     background-color: #2563eb;
     border-radius: 10px;
 }
-
 
 /* =====================================
 PORTFOLIO SECTION
@@ -390,7 +385,6 @@ PORTFOLIO SECTION
     font-weight: bold;
 }
 
-
 /* =====================================
 CONTACT SECTION
 ===================================== */
@@ -432,7 +426,6 @@ CONTACT SECTION
     box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
 }
 
-
 /* =====================================
 FOOTER
 ===================================== */
@@ -462,7 +455,6 @@ footer p {
     color: #6ea8fe;
     text-decoration: none;
 }
-
 
 /* =====================================
 RESPONSIVE DESIGN

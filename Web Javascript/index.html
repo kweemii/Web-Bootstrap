@@ -17,14 +17,11 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="80">
+<body>
 
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -63,10 +60,13 @@
                         <a href="#portfolio" class="btn btn-primary mr-2">Lihat Karya</a>
                         <a href="#contact" class="btn btn-outline-light">Hubungi Saya</a>
                     </div>
+                    <!-- Social Icons (Instagram & GitHub) -->
                     <div class="social-icons mt-4">
-                        <!-- Tautan Instagram (Ganti href dengan link profil IG-mu) -->
-                        <a href="https://www.instagram.com/kimikoor_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/kimikoor_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="mr-3">
                             <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://github.com/kweemii" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
                         </a>
                     </div>
                 </div>
@@ -143,21 +143,6 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Chart Section -->
-            <div class="row chart-section">
-                <div class="col-md-10 mx-auto text-center">
-                    <div class="chart-title">
-                        <h4 class="font-weight-bold">Statistik Eksplorasi Kuliner</h4>
-                        <span>Persentase fokus kategori resep dan eksperimen kuliner yang telah dikembangkan.</span>
-                    </div>
-                    <div class="chart-card">
-                        <div class="chart-container">
-                            <canvas id="culinaryChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -173,8 +158,9 @@
                 <!-- Cooking -->
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="skill-card">
-                        <i class="bi bi-egg-fried"></i>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1830/1830839.png" alt="Cooking" width="70" class="mb-3">
                         <h4>Cooking</h4>
+                        <p class="small text-muted mb-3">Teknik memasak, pengolahan bahan, dan manajemen bumbu</p>
                         <div class="d-flex justify-content-between mb-2">
                             <small class="text-muted">Keahlian</small>
                             <small class="font-weight-bold">85%</small>
@@ -188,8 +174,9 @@
                 <!-- Baking -->
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="skill-card">
-                        <i class="bi bi-cake2"></i>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2682/2682446.png" alt="Baking" width="70" class="mb-3">
                         <h4>Baking</h4>
+                        <p class="small text-muted mb-3">Pembuatan roti, pastry, dessert, dan teknik pemanggangan</p>
                         <div class="d-flex justify-content-between mb-2">
                             <small class="text-muted">Keahlian</small>
                             <small class="font-weight-bold">80%</small>
@@ -203,8 +190,9 @@
                 <!-- Food Plating -->
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="skill-card">
-                        <i class="bi bi-palette"></i>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Food Plating" width="70" class="mb-3">
                         <h4>Food Plating</h4>
+                        <p class="small text-muted mb-3">Seni penyajian hidangan, estetika visual, dan dekorasi piring</p>
                         <div class="d-flex justify-content-between mb-2">
                             <small class="text-muted">Keahlian</small>
                             <small class="font-weight-bold">70%</small>
@@ -215,11 +203,12 @@
                     </div>
                 </div>
 
-                <!-- Food Exploration -->
+                <!-- Exploration -->
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="skill-card">
-                        <i class="bi bi-compass"></i>
+                        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Exploration" width="70" class="mb-3">
                         <h4>Exploration</h4>
+                        <p class="small text-muted mb-3">Riset kuliner lokal, analisis rasa, dan eksplorasi resep</p>
                         <div class="d-flex justify-content-between mb-2">
                             <small class="text-muted">Keahlian</small>
                             <small class="font-weight-bold">95%</small>
@@ -341,10 +330,13 @@
         <div class="container">
             <h4 class="font-weight-bold">KIM'S</h4>
             <p>Exploring flavors, one dish at a time.</p>
+            <!-- Social Icons Footer (Instagram & GitHub) -->
             <div class="footer-social my-3">
-                <!-- Tautan Instagram Footer -->
-                <a href="https://instagram.com/username_kamu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/kimikoor_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="mr-2">
                     <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://github.com/kweemii" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
                 </a>
             </div>
             <p class="small mb-0">© 2026 Kimiko Olivia R. All Rights Reserved.</p>
@@ -358,45 +350,36 @@
 
     <script>
         $(document).ready(function () {
-            // Smooth Scroll
-            $('.navbar-nav a.nav-link[href^="#"]').on('click', function (e) {
-                e.preventDefault();
-                var target = this.hash;
-                var $target = $(target);
 
-                if ($target.length) {
-                    var scrollToPosition = $target.offset().top - 75;
-                    $('html, body').stop().animate({
-                        'scrollTop': scrollToPosition
-                    }, 500, 'swing');
-                }
-                $('.navbar-collapse').collapse('hide');
+            // Skrip Menu Active & Scroll Otomatis
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    $('.navbar-collapse').collapse('hide');
+                });
             });
 
-            // Chart Configuration
-            const ctx = document.getElementById('culinaryChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Nusantara Cuisine', 'Baking & Pastry', 'Street Food', 'Modern Fusion'],
-                    datasets: [{
-                        label: 'Jumlah Eksperimen Resep',
-                        data: [42, 28, 35, 19],
-                        backgroundColor: ['#2563eb', '#6ea8fe', '#38b6ff', '#64dfdf'],
-                        borderColor: ['#1d4ed8', '#4b8fe2', '#2392d4', '#48c2c2'],
-                        borderWidth: 1,
-                        borderRadius: 6
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { beginAtZero: true, grid: { color: 'rgba(0, 0, 0, 0.05)' } },
-                        x: { grid: { display: false } }
+            window.addEventListener('scroll', function () {
+                let scrollPos = window.scrollY + 120;
+                let sections = document.querySelectorAll('section');
+
+                sections.forEach(section => {
+                    let top = section.offsetTop;
+                    let height = section.offsetHeight;
+                    let id = section.getAttribute('id');
+
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            }
+                        });
                     }
-                }
+                });
             });
 
             // Form Submit Event
